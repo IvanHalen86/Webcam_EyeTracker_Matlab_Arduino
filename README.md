@@ -5,7 +5,7 @@ If you need to track a saccade, measure the number of fixations or a reaction ti
 
 The youtube tutorial can be found at this link
 
-
+https://youtu.be/ztaJDjMQH68
 
 Before running the matlab code connect arduino to the computer and run the "Arduino_Matlab_serial.ino" file. This will allow you to make 
 arduino communicate with matlab. 
