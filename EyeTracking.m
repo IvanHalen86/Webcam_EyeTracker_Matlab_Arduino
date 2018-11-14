@@ -42,7 +42,7 @@ if size(img,3)==3
     la_imagen=rgb2gray(img);
 end
 
- piel=~im2bw(la_imagen,0.2);
+ piel=~im2bw(la_imagen,0.1);
 %     --
  piel=bwmorph(piel,'close');
  piel=bwmorph(piel,'open');
