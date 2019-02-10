@@ -5,11 +5,12 @@
 % following string.
 
 ar = serial('/dev/cu.usbmodem1411','BaudRate',9600);
-% create a camera object. Check for the camera name with the command
+% Check for the camera name with the command
 % webcamlist() in matlab.
 cameras= webcamlist();
-% open the matrix camera and see which camera correspond to your modified webcam. select that camera just by entering an index
-% within the curly brackets. It could be 1, 2, 3... depends on hwo many webcams you have acctached on your computer
+% type "cameras" in the command window and see which camera correspond to your modified webcam. select that camera 
+% just by entering the index within the curly brackets. 
+% It could be 1, 2, 3... depends on hwo many webcams you have acctached on your computer
 mycamera = cameras{2}
 % create a 'cam' variable with your camera name
 cam = webcam(char(mycamera))
