@@ -6,12 +6,16 @@
 
 ar = serial('/dev/cu.usbmodem1411','BaudRate',9600);
 % create a camera object. Check for the camera name with the command
-% webcamlist() in matlab. Write the name of the webcam in the following command
-
-cam = webcam('USB2.0 PC CAMERA')
+% webcamlist() in matlab.
+cameras= webcamlist();
+% open the matrix camera and see which camera correspond to your modified webcam. select that camera just by entering an index
+% within the curly brackets. It could be 1, 2, 3... depends on hwo many webcams you have acctached on your computer
+mycamera = cameras{2}
+% create a 'cam' variable with your camera name
+cam = webcam(char(mycamera))
 
 %check if the camera is positioned in the right way, with the focus on the
-%center of the eye.
+%center of the eye. The "preview" command let you see what the camera see.
 preview(cam)
 
 %open arduino USB port
